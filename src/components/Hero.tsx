@@ -3,28 +3,6 @@ import NavigateButton from "./ui/NavigateButton";
 import glow from "/assets/hero/glow.svg";
 import profile1 from "/assets/hero/profile_1.png";
 
-/*
-
-   {/* <WaveSvg />,[mask-image:linear-gradient(to_right,black,transparent_80%),linear-gradient(to_bottom,black,transparent_80%)] */
-
-/*
-
-  <div className="flex">
-  <Stat />
-  <Stat />
-  <Stat />
-</div>
-
-w-full
-w-[71%]
-*/
-/*
-
-flex flex-col justify-center md:flex-row
-[58%_42%]
-
-*/
-
 const Stat = ({
   value,
   label,
@@ -54,12 +32,12 @@ const Hero = () => {
   return (
     <section className="grid overflow-hidden pt-[124px] md:pt-[134px] xl:pt-[147px]">
       {/* First */}
-      <div className="border-border-color">
-        <div className="grid justify-center md:grid-cols-[58%_42%]">
+      <div className="border-border-color relative">
+        <div className="flex flex-col justify-center md:flex-row">
           {/* Left */}
           <div className="border-border-color flex flex-col border-r">
             {/* Top */} {/* */} {/* md:pr-[20px] lg:pr-[50px] */}
-            <div className="common-x-padding flex max-w-[calc(0.6*var(--xl-max-element-width))] flex-col gap-[20px] self-end py-[30px] md:py-[100px]">
+            <div className="common-x-padding flex max-w-[calc(0.6*var(--xl-max-element-width))] flex-col gap-[20px] py-[30px] md:py-[100px]">
               <h4 className="text-secondary-text-color text-xl">
                 Your Journey to Tomorrow Begins Here
               </h4>
@@ -74,7 +52,8 @@ const Hero = () => {
               </p>
             </div>
             {/* Bottom */}
-            <div className="border-border-color flex w-full justify-end border-t border-b">
+            <div className="border-border-color relative flex w-full justify-end border-b">
+              <hr className="border-border-color absolute right-0 w-screen" />
               <div className="flex w-full max-w-[calc(0.6*var(--xl-max-element-width))]">
                 <Stat value="300" label="Resources available" />
                 <Stat value="12k" label="Total Downloads" />
@@ -87,7 +66,7 @@ const Hero = () => {
             </div>
           </div>
           {/* Right */}
-          <div className="border-border-color relative flex flex-col justify-end border-b">
+          <div className="border-border-color relative z-10 flex flex-col justify-end border-b">
             <img
               src={glow}
               alt="Glowing star"
@@ -115,6 +94,7 @@ const Hero = () => {
               </NavigateButton>
             </div>
           </div>
+          <hr className="border-border-color absolute right-0 bottom-0 left-0" />
         </div>
       </div>
       {/* Second */} <div className="md:row-span-2"></div>
