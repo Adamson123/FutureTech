@@ -7,7 +7,7 @@ const Button = (props: HTMLAttributes<HTMLButtonElement>) => {
     <button
       {...others}
       className={cn(
-        "bg-secondary text-background rounded-[10px] px-4 py-2.5 font-semibold md:px-4",
+        "bg-secondary text-background rounded-[10px] px-4 py-2.5 md:px-4",
         className,
       )}
     />

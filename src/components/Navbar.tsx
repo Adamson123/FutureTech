@@ -12,9 +12,9 @@ const links = [
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className="fixed inset-x-0 z-50">
       {/* Subscribe */}
-      <div className="bg-opa flex items-center justify-center bg-[url('/assets/navbar/wave.svg')] bg-cover bg-center bg-no-repeat py-5">
+      <div className="bg-background flex items-center justify-center bg-[url('/assets/navbar/wave.svg')] bg-cover bg-center bg-no-repeat py-4">
         <div className="flex items-center gap-[13px] text-[#98989A]">
           Subscribe to our Newsletter For New & latest Blogs and Resources
           <ArrowSvg className="size-[13.75]" />

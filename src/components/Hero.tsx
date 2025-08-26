@@ -1,3 +1,4 @@
+import { cn } from "../lib/cn";
 import NavigateButton from "./ui/NavigateButton";
 import glow from "/assets/hero/glow.svg";
 import profile1 from "/assets/hero/profile_1.png";
@@ -6,16 +7,6 @@ import profile1 from "/assets/hero/profile_1.png";
 
    {/* <WaveSvg />,[mask-image:linear-gradient(to_right,black,transparent_80%),linear-gradient(to_bottom,black,transparent_80%)] */
 
-const Stat = () => {
-  return (
-    <div className="flex border py-[50px]">
-      <h2 className="text-xl_40-lg_35-md_30-sm_24">
-        300<span className="text-secondary">+</span>
-      </h2>
-      <p>Resources available</p>
-    </div>
-  );
-};
 /*
 
   <div className="flex">
@@ -24,18 +15,51 @@ const Stat = () => {
   <Stat />
 </div>
 
+w-full
+w-[71%]
 */
+/*
+
+flex flex-col justify-center md:flex-row
+[58%_42%]
+
+*/
+
+const Stat = ({
+  value,
+  label,
+  className,
+}: {
+  value: string;
+  label: string;
+  className?: string;
+}) => {
+  return (
+    <div
+      className={cn(
+        "border-border-color flex w-full flex-col gap-2.5 border-r px-5 py-5 lg:py-[50px]",
+        className,
+      )}
+    >
+      <h2 className="text-xl_40-lg_35-md_30-sm_24">
+        {value}
+        <span className="text-secondary">+</span>
+      </h2>
+      <p className="text-secondary-text-color-2">{label}</p>
+    </div>
+  );
+};
 
 const Hero = () => {
   return (
-    <section className="grid">
+    <section className="grid overflow-hidden pt-[124px] md:pt-[134px] xl:pt-[147px]">
       {/* First */}
-      <div className="border-border-color border-b">
-        <div className="common-x-padding common-max-width mx-auto flex">
+      <div className="border-border-color">
+        <div className="grid justify-center md:grid-cols-[58%_42%]">
           {/* Left */}
-          <div className="border-border-color w-[60%] border-r pr-8 md:pr-[20px] lg:pr-[50px]">
-            {/* First of left */}
-            <div className="flex max-w-[893px] flex-col gap-[20px] py-[100px]">
+          <div className="border-border-color flex flex-col border-r">
+            {/* Top */} {/* */} {/* md:pr-[20px] lg:pr-[50px] */}
+            <div className="common-x-padding flex max-w-[calc(0.6*var(--xl-max-element-width))] flex-col gap-[20px] self-end py-[30px] md:py-[100px]">
               <h4 className="text-secondary-text-color text-xl">
                 Your Journey to Tomorrow Begins Here
               </h4>
@@ -49,35 +73,51 @@ const Hero = () => {
                 the heart of AI.
               </p>
             </div>
+            {/* Bottom */}
+            <div className="border-border-color flex w-full justify-end border-t border-b">
+              <div className="flex w-full max-w-[calc(0.6*var(--xl-max-element-width))]">
+                <Stat value="300" label="Resources available" />
+                <Stat value="12k" label="Total Downloads" />
+                <Stat
+                  value="10k"
+                  label="Active Users"
+                  className="border-none"
+                />
+              </div>
+            </div>
           </div>
           {/* Right */}
-          <div className="relative flex w-[40%] flex-col items-start justify-end gap-3.5 overflow-hidden py-[80px] pl-[50px] xl:pl-[80px]">
+          <div className="border-border-color relative flex flex-col justify-end border-b">
             <img
               src={glow}
               alt="Glowing star"
               className="glowMaskImage absolute top-0 left-0 -z-10 max-w-[400px]"
             />
-            {/* Profiles */}
-            <div className="border-border-color bg-background flex -space-x-4 rounded-full border p-2.5">
-              {[profile1, profile1, profile1, profile1].map((image, i) => (
-                <img
-                  className="bg-border-color size-[40px] rounded-full border-2 border-[#666666] object-cover md:size-[45px] xl:size-[60px]"
-                  key={i}
-                  src={image}
-                />
-              ))}
+            <div className="flex flex-col items-start justify-end gap-3.5 overflow-hidden pt-[120px] pr-[50px] pb-[50px] pl-[50px] md:max-w-[calc(0.4*var(--xl-max-element-width))] md:pr-2 xl:pl-[80px]">
+              {/* Profiles */}
+              <div className="border-border-color bg-background flex -space-x-4 rounded-full border p-2.5">
+                {[profile1, profile1, profile1, profile1].map((image, i) => (
+                  <img
+                    className="bg-border-color size-[40px] rounded-full border-2 border-[#666666] object-cover md:size-[45px] xl:size-[60px]"
+                    key={i}
+                    src={image}
+                  />
+                ))}
+              </div>
+              <h3 className="text-xl_24-md_20-sm_18">
+                Explore 1000+ resources
+              </h3>
+              <h4 className="text-secondary-text-color-2">
+                Over 1,000 articles on emerging tech trends and breakthroughs.
+              </h4>
+              <NavigateButton className="w-full justify-center md:w-auto">
+                Explore Resources
+              </NavigateButton>
             </div>
-            <h3 className="text-xl_24-md_20-sm_18">Explore 1000+ resources</h3>
-            <h4 className="text-secondary-text-color-2">
-              Over 1,000 articles on emerging tech trends and breakthroughs.
-            </h4>
-            <NavigateButton>Explore Resources</NavigateButton>
           </div>
         </div>
       </div>
-
-      {/* Second */}
-      <div className="md:row-span-2"></div>
+      {/* Second */} <div className="md:row-span-2"></div>
     </section>
   );
 };
