@@ -1,4 +1,5 @@
 import type { HTMLAttributes } from "react";
+import { cn } from "../../lib/cn";
 
 const ArrowSvg = (props: HTMLAttributes<SVGSVGElement>) => {
   const { className, ...others } = props;
@@ -9,7 +10,7 @@ const ArrowSvg = (props: HTMLAttributes<SVGSVGElement>) => {
       viewBox="0 0 15 15"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      className={cn(className)}
       {...others}
     >
       <path

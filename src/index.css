@@ -3,7 +3,7 @@
 @import "tailwindcss";
 
 :root {
-  --xl-max-element-width: 1450px;
+  --xl-max-element-width: 1500px;
   --md-max-element-width: 1280px;
   --sm-max-element-width: 95%;
 }
@@ -18,17 +18,40 @@
   --font-kubh-sans: "Kumbh Sans", sans-serif;
 }
 
-@utility text-xl_17-md_14-sm_12 {
-  @apply text-xs md:text-sm xl:text-[17px];
+@utility text-xl_16-md_14-sm_12 {
+  @apply text-xs md:text-sm xl:text-[16px];
+}
+@utility text-xl_20-md_18-sm_16 {
+  @apply text-[16px] md:text-[18px] xl:text-xl;
 }
 @utility text-xl_55-lg_45-md_40-sm_30 {
   @apply text-3xl md:text-[40px] lg:text-[45px] xl:text-[55px];
 }
-@utility text-xl_40-lg_35-md_30-sm_24 {
-  @apply text-2xl md:text-[30px] lg:text-[35px] xl:text-[40px];
+@utility text-xl_45-lg_40-md_35-sm_24 {
+  @apply text-2xl md:text-[35px] lg:text-[40px] xl:text-[45px];
 }
+@utility text-xl_30-md_25-sm_18 {
+  @apply text-[18px] md:text-[25px] xl:text-[30px];
+}
+
 @utility common-x-padding {
   @apply px-4 md:px-[2rem];
+}
+
+@utility common-l-padding {
+  @apply pl-4 md:pl-[2rem];
+}
+
+@utility common-r-padding {
+  @apply pr-4 md:pr-[2rem];
+}
+
+@utility custom-width {
+  @apply w-[var(--xl-max-element-width)];
+}
+
+@utility min-custom-width {
+  @apply min-w-[var(--xl-max-element-width)];
 }
 
 /* sm:max-w-["var(--sm-max-element-width)"] md:max-w-["var(--md-max-element-width)"] */
@@ -57,6 +80,10 @@ body {
 
   -webkit-mask-composite: intersect;
   mask-composite: intersect;
+}
+
+button {
+  cursor: pointer;
 }
 
 /* .glow g {
