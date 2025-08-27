@@ -68,14 +68,14 @@ const Item = ({
   return (
     <div className="border-border-color border-b">
       <div className="common-max-width common-x-padding mx-auto flex flex-col md:flex-row">
-        {/* right */}
+        {/* left */}
         <div className="border-border-color w-full border-b py-[50px] pr-[30px] md:w-[43%] md:border-r md:border-b-0 md:py-[100px] lg:pr-[50px] xl:py-[130px]">
           <img src={icon} className="mb-[30px] size-12" />
 
           <h3 className="text-xl_30-md_25-sm_18 mb-2">{title}</h3>
           <p className="text-secondary-text-color-2">{description}</p>
         </div>
-        {/* Left */}
+        {/* right */}
         <div className="grid w-full gap-5 max-md:py-5 md:w-[57%] md:grid-cols-2 md:py-[30px] md:pl-[30px] lg:py-[50px] lg:pl-[50px]">
           {attributes.map((attr, i) => (
             <AttrComponent

@@ -10,7 +10,7 @@ const FutureTech = () => {
         subtitle="Unlock the Power of"
         title="FutureTech Features"
       />
-      <div className="">
+      <div>
         <Item
           attributes={firstAttributes}
           icon={future}

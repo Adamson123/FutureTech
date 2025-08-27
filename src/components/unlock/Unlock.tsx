@@ -1,4 +1,5 @@
-import SectionTitle from "./ui/SectionTitle";
+import SectionTitle from "../ui/SectionTitle";
+import Item from "./Item";
 
 const Unlock = () => {
   return (
@@ -7,6 +8,10 @@ const Unlock = () => {
         subtitle="Your Gateway to In-Depth Information"
         title="Unlock Valuable Knowledge with FutureTech's Resources"
       />
+      <div className="">
+        <Item />
+        <Item />
+      </div>
     </section>
   );
 };

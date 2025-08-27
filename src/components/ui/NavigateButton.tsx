@@ -1,9 +1,11 @@
-import type { HTMLAttributes } from "react";
+import type { HTMLAttributes, ReactNode } from "react";
 import { cn } from "../../lib/cn";
 import ArrowSvg from "./ArrowSvg";
 
-const NavigateButton = (props: HTMLAttributes<HTMLButtonElement>) => {
-  const { className, children, ...others } = props;
+const NavigateButton = (
+  props: HTMLAttributes<HTMLButtonElement> & { icon?: ReactNode },
+) => {
+  const { className, children, icon, ...others } = props;
   return (
     <button
       {...others}
@@ -12,7 +14,7 @@ const NavigateButton = (props: HTMLAttributes<HTMLButtonElement>) => {
         className,
       )}
     >
-      {children} <ArrowSvg className="transition-all duration-400" />
+      {children} {icon || <ArrowSvg className="transition-all duration-400" />}
     </button>
   );
 };

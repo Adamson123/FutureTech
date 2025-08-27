@@ -2,7 +2,8 @@ import Explore from "./components/explore/Explore";
 import FutureTech from "./components/furturetech/FutureTech";
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/Navbar";
-import Unlock from "./components/Unlock";
+import RealWords from "./components/RealWords";
+import Unlock from "./components/unlock/Unlock";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <FutureTech />
       <Explore />
       <Unlock />
+      <RealWords />
     </main>
   );
 }
