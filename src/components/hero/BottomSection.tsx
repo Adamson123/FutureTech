@@ -3,6 +3,7 @@ import ArrowSvg from "../ui/ArrowSvg";
 import updates from "/assets/hero/updates.svg";
 import expert from "/assets/hero/experts.svg";
 import global from "/assets/hero/global.svg";
+import ArrowButton from "../ui/ArrowButton";
 
 type ItemProps = {
   title: string;
@@ -10,8 +11,6 @@ type ItemProps = {
   description: string;
   iconSrc: string;
   className?: string;
-  arrowClassName?: string;
-  arrowStyle?: React.CSSProperties;
 };
 
 const Item = ({
@@ -20,8 +19,6 @@ const Item = ({
   description,
   iconSrc,
   className = "",
-  arrowClassName,
-  arrowStyle,
 }: ItemProps) => {
   return (
     <div className={cn(`border-border-color w-full`, className)}>
@@ -35,12 +32,7 @@ const Item = ({
           <h4 className="text-xl_20-md_18-sm_16 mb-1">{title}</h4>
           <p className="text-secondary-text-color">{subtitle}</p>
         </div>
-        <button className="bg-secondary flex max-h-9 min-h-9 min-w-9 cursor-pointer items-center justify-center rounded-full">
-          <ArrowSvg
-            className={arrowClassName ?? "[&>path]:fill-background"}
-            style={arrowStyle}
-          />
-        </button>
+        <ArrowButton />
       </div>
 
       {/* Text */}

@@ -1,3 +1,4 @@
+import BePart from "./components/BePart";
 import Explore from "./components/explore/Explore";
 import FutureTech from "./components/furturetech/FutureTech";
 import Hero from "./components/hero/Hero";
@@ -14,6 +15,7 @@ function App() {
       <Explore />
       <Unlock />
       <RealWords />
+      <BePart />
     </main>
   );
 }
