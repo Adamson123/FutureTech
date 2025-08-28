@@ -1,5 +1,4 @@
 import { cn } from "../../lib/cn";
-import ArrowSvg from "../ui/ArrowSvg";
 import updates from "/assets/hero/updates.svg";
 import expert from "/assets/hero/experts.svg";
 import global from "/assets/hero/global.svg";

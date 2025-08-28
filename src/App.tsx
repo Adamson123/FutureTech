@@ -1,6 +1,7 @@
 import BePart from "./components/BePart";
 import Explore from "./components/explore/Explore";
-import FutureTech from "./components/furturetech/FutureTech";
+import Footer from "./components/Footer";
+import FutureTech from "./components/futuretech/FutureTech";
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/Navbar";
 import RealWords from "./components/RealWords";
@@ -16,6 +17,7 @@ function App() {
       <Unlock />
       <RealWords />
       <BePart />
+      <Footer />
     </main>
   );
 }

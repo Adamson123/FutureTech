@@ -14,6 +14,7 @@
   --color-secondary: #ffd11a;
   --color-secondary-text-color: #7e7e81;
   --color-secondary-text-color-2: #98989a;
+  --color-secondary-text-color-3: #666666;
   --color-border-color: #262626;
   --font-kubh-sans: "Kumbh Sans", sans-serif;
 }
@@ -71,21 +72,29 @@ body {
   mask-image:
     linear-gradient(to right, rgb(0, 0, 0), transparent 70%),
     linear-gradient(to bottom, rgb(0, 0, 0), transparent 70%);
-  mask-composite: intersect; /* Ensures gradients combine properly */
+  mask-composite: intersect;
 
-  /* For WebKit browsers */
   -webkit-mask-image:
     linear-gradient(to right, rgb(0, 0, 0), transparent 70%),
     linear-gradient(to bottom, rgb(0, 0, 0), transparent 70%);
-
   -webkit-mask-composite: intersect;
-  mask-composite: intersect;
 }
 
 button {
   cursor: pointer;
 }
 
+.gradient-border {
+  position: relative;
+}
+.gradient-border::before {
+  content: "";
+  inset: -2px;
+  position: absolute;
+  z-index: -1;
+  border-radius: 8px;
+  background: linear-gradient(75deg, #262626, rgba(255, 204, 0, 0.208));
+}
 /* .glow g {
   opacity: 0.8;
 } */

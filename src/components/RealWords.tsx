@@ -47,7 +47,7 @@ const Comment = () => {
           />
           <div>
             <p>Sarah Thompson</p>
-            <p className="text-xl_16-md_14-sm_12 mt-0.5 text-[#666666]">
+            <p className="text-xl_16-md_14-sm_12 text-secondary-text-color-3 mt-0.5">
               San Francisco, USA
             </p>
           </div>
