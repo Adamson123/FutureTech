@@ -22,7 +22,7 @@
   @apply text-xs md:text-sm xl:text-[16px];
 }
 @utility text-xl_20-md_18-sm_16 {
-  @apply text-[16px] md:text-[18px] xl:text-xl;
+  @apply text-[15px] md:text-[16px] xl:text-[18px];
 }
 @utility text-xl_55-lg_45-md_40-sm_30 {
   @apply text-3xl md:text-[40px] lg:text-[45px] xl:text-[55px];

@@ -67,7 +67,10 @@ const RightSection = () => {
             <p className="text-secondary-text-color-2 mb-1.5">Total Ebooks</p>
             <p>Over 100 ebooks</p>
           </div>
-          <NavigateButton icon={<EyeSvg className="h-3.5 w-4" />}>
+          <NavigateButton
+            className="bg-background"
+            icon={<EyeSvg className="h-3.5 w-4" />}
+          >
             Preview
           </NavigateButton>
         </div>
