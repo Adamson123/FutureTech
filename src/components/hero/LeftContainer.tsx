@@ -21,28 +21,29 @@ const Stat = ({
 const LeftContainer = () => {
   {
     /*
-    Responsive width explanation:
+    Responsive sizing for the outer container
 
-    lg:w-[calc((100vw - var(--xl-max-element-width)) / 2 + 0.6 * var(--xl-max-element-width))]
-    → At ≥ lg:
-        width = side gutter + 60% of max content width.
+    lg (≥1024px):
+      lg:w-[calc((100vw - var(--xl-max-element-width)) / 2 + 0.6 * var(--xl-max-element-width) - 0.4%)]
+      = one gutter of the centered layout
+      + 60% of the content column
+      - 0.4% nudge to avoid sub-pixel overflow and keep the right border aligned.
 
-    Breakdown of calc():
-      - (100vw - var(--xl-max-element-width)) = leftover space outside centered container
-      - ÷ 2 = one gutter (left or right)
-      - + 0.6 * var(--xl-max-element-width) = 60% of the content column
+    md (≥768px and <1024px):
+      md:w-[calc(((100vw - var(--xl-max-element-width)) / 2 + 0.6 * var(--xl-max-element-width)) - 60px)]
+      Same as above, then -60px for a tighter fit on medium screens.
+
+    Breakdown:
+      - (100vw - var(--xl-max-element-width)) / 2 → one side gutter
+      - + 0.6 * var(--xl-max-element-width) → span into 60% of the content area
 
     Effect:
-      Ensures this block spans from the viewport edge
-      into the content column, keeping layout balanced.
-
-    md:w-[... - 60px]
-    → Same math, but minus 60px for tighter fit at medium screens.
-*/
+      Spans from the viewport edge into the content column, preserving balance with the centered grid.
+    */
   }
 
   return (
-    <div className="border-border-color flex flex-col items-end border-r max-md:border-r-0 md:w-[calc(((100vw-var(--xl-max-element-width))/2+0.6*var(--xl-max-element-width))-60px)] lg:w-[calc((100vw-var(--xl-max-element-width))/2+0.6*var(--xl-max-element-width))]">
+    <div className="border-border-color flex flex-col items-end border-r max-md:border-r-0 md:w-[calc(((100vw-var(--xl-max-element-width))/2+0.6*var(--xl-max-element-width))-60px)] lg:w-[calc((100vw-var(--xl-max-element-width))/2+0.6*var(--xl-max-element-width)-0.4%)]">
       {/* Top */} {/* */} {/* md:pr-[20px] lg:pr-[50px] */}
       <div className="common-x-padding flex max-w-[calc(0.6*var(--xl-max-element-width))] flex-col gap-[20px] py-[30px] md:py-[50px] lg:py-[100px]">
         <h4 className="text-secondary-text-color text-xl">
