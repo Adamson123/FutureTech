@@ -19,7 +19,7 @@ const Attribution = ({ className }: { className?: string }) => {
       </a>{" "}
       • Coded by{" "}
       <a
-        href="https://damsfolio.vercel.app"
+        href="https://github.com/Adamson123"
         target="_blank"
         rel="noopener noreferrer"
         className="underline"
