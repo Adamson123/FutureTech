@@ -42,7 +42,7 @@ const LeftContainer = () => {
   }
 
   return (
-    <div className="border-border-color flex flex-col items-end border-r md:w-[calc(((100vw-var(--xl-max-element-width))/2+0.6*var(--xl-max-element-width))-60px)] lg:w-[calc((100vw-var(--xl-max-element-width))/2+0.6*var(--xl-max-element-width))]">
+    <div className="border-border-color flex flex-col items-end border-r max-md:border-r-0 md:w-[calc(((100vw-var(--xl-max-element-width))/2+0.6*var(--xl-max-element-width))-60px)] lg:w-[calc((100vw-var(--xl-max-element-width))/2+0.6*var(--xl-max-element-width))]">
       {/* Top */} {/* */} {/* md:pr-[20px] lg:pr-[50px] */}
       <div className="common-x-padding flex max-w-[calc(0.6*var(--xl-max-element-width))] flex-col gap-[20px] py-[30px] md:py-[50px] lg:py-[100px]">
         <h4 className="text-secondary-text-color text-xl">
@@ -60,7 +60,7 @@ const LeftContainer = () => {
       {/* Bottom */}
       <div className="border-border-color relative flex w-full justify-end border-t border-b">
         {/* <hr className="border-border-color absolute right-0 w-screen" /> */}
-        <div className="[&>div:nth-child(1)]:common-l-padding flex w-full max-w-[calc(0.6*var(--xl-max-element-width))] [&>div:nth-child(1)]:border-r [&>div:nth-child(2)]:border-r">
+        <div className="[&>div:nth-child(1)]:common-l-padding flex w-full max-w-[calc(0.6*var(--xl-max-element-width))] [&>div:nth-child(1)]:border-r [&>div:nth-child(2)]:border-r max-md:[&>div:nth-child(3)]:border-r-0">
           <Stat value="300" label="Resources available" />
           <Stat value="12k" label="Total Downloads" />
           <Stat value="10k" label="Active Users" />
