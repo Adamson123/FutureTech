@@ -18,7 +18,7 @@ const Stat = ({
   );
 };
 
-const LeftSection = () => {
+const LeftContainer = () => {
   {
     /*
     Responsive width explanation:
@@ -70,4 +70,4 @@ const LeftSection = () => {
   );
 };
 
-export default LeftSection;
+export default LeftContainer;

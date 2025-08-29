@@ -1,7 +1,10 @@
-import { cn } from "../lib/cn";
-import ArrowSvg from "./ui/ArrowSvg";
-import Button from "./ui/Button";
+import { useState } from "react";
+import { cn } from "../../lib/cn";
+import ArrowSvg from "../ui/ArrowSvg";
+import Button from "../ui/Button";
+import Menu from "./Menu";
 import fullLogo from "/assets/full-logo.svg";
+import menuIcon from "/assets/navbar/menu.svg";
 
 const links = [
   { name: "Home", href: "#" },
@@ -11,6 +14,7 @@ const links = [
 ];
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpened] = useState(false);
   return (
     <nav className="fixed inset-x-0 z-50">
       {/* Subscribe */}
@@ -48,9 +52,18 @@ const Navbar = () => {
             ))}
           </ul>
           {/* Button */}
-          <Button>Contact Us</Button>
+          <Button className="hidden md:inline">Contact Us</Button>
+          {/* Menu Icon */}
+          <img
+            onClick={() => setIsMenuOpened(true)}
+            about="menu icon"
+            src={menuIcon}
+            alt="menu"
+            className="size-7 cursor-pointer md:hidden"
+          />
         </div>
       </div>
+      <Menu isMenuOpen={isMenuOpen} setIsMenuOpened={setIsMenuOpened} />
     </nav>
   );
 };

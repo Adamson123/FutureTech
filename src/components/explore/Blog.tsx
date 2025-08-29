@@ -1,6 +1,8 @@
 import LoveSvg from "../ui/LoveSvg";
 import NavigateButton from "../ui/NavigateButton";
 import john from "/assets/explore/john.png";
+import comment from "/assets/explore/comment.svg";
+import share from "/assets/explore/share.svg";
 
 const Blog = ({ name, subject }: { name: string; subject: string }) => {
   return (
@@ -44,12 +46,12 @@ const Blog = ({ name, subject }: { name: string; subject: string }) => {
                 </button>
                 {/* Comments */}
                 <button>
-                  <LoveSvg className="h-3 w-3" />
+                  <img src={comment} className="h-3 w-3" />
                   72
                 </button>
                 {/* Share */}
                 <button>
-                  <LoveSvg className="h-3 w-3" />
+                  <img src={share} className="h-3 w-3" />
                   30
                 </button>
               </div>

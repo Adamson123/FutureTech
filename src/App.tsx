@@ -3,7 +3,7 @@ import Explore from "./components/explore/Explore";
 import Footer from "./components/Footer";
 import FutureTech from "./components/futuretech/FutureTech";
 import Hero from "./components/hero/Hero";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import RealWords from "./components/RealWords";
 import Unlock from "./components/unlock/Unlock";
 

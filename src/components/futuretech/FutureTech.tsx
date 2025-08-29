@@ -1,5 +1,5 @@
 import SectionTitle from "../ui/SectionTitle";
-import Item, { firstAttributes, secondAttributes } from "./Item";
+import Item, { firstAttributes, secondAttributes } from "./FutureTechItem";
 import future from "/assets/futuretech/future.svg";
 import research from "/assets/futuretech/research.svg";
 
