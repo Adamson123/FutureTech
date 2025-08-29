@@ -24,7 +24,7 @@ const Attribution = ({ className }: { className?: string }) => {
         rel="noopener noreferrer"
         className="underline"
       >
-        me
+        Adam Ajibade
       </a>
     </p>
   );

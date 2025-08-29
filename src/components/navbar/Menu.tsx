@@ -21,7 +21,7 @@ const Menu = ({
       <div
         onClick={(e) => e.stopPropagation()}
         className={cn(
-          "bg-background ml-auto flex h-screen w-xs flex-col py-5 transition-all duration-300 ease-in-out",
+          "bg-background ml-auto flex h-screen w-[350px] flex-col py-5 transition-all duration-300 ease-in-out",
           isMenuOpen ? "translate-x-0" : "translate-x-100",
         )}
       >
