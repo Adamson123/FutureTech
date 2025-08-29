@@ -69,7 +69,10 @@ const RightContainer = ({
         <p className="text-secondary-text-color-2">{description}</p>
       </div>
       {/* Second */}
-      <img className="h-[270px] rounded-xl object-cover" src={image} />
+      <img
+        className="h-[270px] rounded-xl object-cover max-lg:h-[200px]"
+        src={image}
+      />
       {/* Third */}
       <div className="flex w-full gap-5 max-lg:flex-col">
         {/* Right */}

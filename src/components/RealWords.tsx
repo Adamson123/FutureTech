@@ -36,8 +36,8 @@ import star from "/assets/realwords/star.svg";
 
 const Comment = () => {
   return (
-    <div className="border-border-color bg-gren-500 bg-green- flex border-r border-b">
-      <div className="bg-red- flex w-full max-w-[calc(var(--xl-max-element-width)/3)] flex-col items-center px-8 py-24">
+    <div className="border-border-color flex border-r border-b">
+      <div className="flex w-full max-w-[calc(var(--xl-max-element-width)/3)] flex-col items-center px-8 py-24 max-md:py-16">
         {/* Profile */}
         <div className="flex gap-2.5">
           <img
