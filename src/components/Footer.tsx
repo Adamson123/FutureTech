@@ -4,6 +4,7 @@ import firstIcon from "/assets/footer/icon.svg";
 import twitter from "/assets/footer/twitter.svg";
 import linkedin from "/assets/footer/linkedin.svg";
 import footerLinks from "../data/footerLinks";
+import Attribution from "./ui/Attribution";
 
 const LinkwithTag = ({ text }: { text: string }) => {
   return (
@@ -87,6 +88,7 @@ const Footer = () => {
           {/* Right */}
           <p>&copy; 2024 FutureTech. All rights reserved.</p>
         </div>
+        <Attribution />
       </div>
     </footer>
   );

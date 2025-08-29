@@ -1,6 +1,7 @@
 import type { Dispatch, SetStateAction } from "react";
 import { cn } from "../../lib/cn";
 import Button from "../ui/Button";
+import Attribution from "../ui/Attribution";
 
 const Menu = ({
   isMenuOpen,
@@ -20,7 +21,7 @@ const Menu = ({
       <div
         onClick={(e) => e.stopPropagation()}
         className={cn(
-          "bg-background ml-auto h-screen w-xs py-5 transition-all duration-300 ease-in-out",
+          "bg-background ml-auto flex h-screen w-xs flex-col py-5 transition-all duration-300 ease-in-out",
           isMenuOpen ? "translate-x-0" : "translate-x-100",
         )}
       >
@@ -54,6 +55,8 @@ const Menu = ({
         <div className="mt-7 px-5">
           <Button className="w-full">Contact Us</Button>
         </div>
+
+        <Attribution className="mt-auto pb-0" />
       </div>
     </div>
   );
