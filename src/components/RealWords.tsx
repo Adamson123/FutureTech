@@ -54,7 +54,7 @@ const Comment = () => {
         </div>
         <div className="flex flex-col items-center">
           {/* Stars */}
-          <div className="border-border-color bg-background flex translate-y-5 items-center gap-3 rounded-full border px-4 py-2">
+          <div className="border-border-color bg-background flex translate-y-5 items-center gap-2.5 rounded-full border px-4 pt-1.5 pb-2">
             {Array.from({ length: 5 }).map((_, i) => (
               <img className="size-5" src={star} key={i} />
             ))}
