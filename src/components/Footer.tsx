@@ -17,7 +17,13 @@ const LinkwithTag = ({ text }: { text: string }) => {
   );
 };
 
-const NavLink = ({ link }: { link: any }) => {
+type FooterLinkItem = {
+  name: string;
+  tag?: string;
+  external?: boolean;
+};
+
+const NavLink = ({ link }: { link: FooterLinkItem }) => {
   if (link.tag) {
     return <LinkwithTag text={link.name} />;
   } else if (link.external) {

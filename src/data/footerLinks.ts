@@ -36,7 +36,7 @@ const footerLinks = [
     title: "Podcasts",
     items: [
       { name: "AI Revolution" },
-      { name: "AI Revolution", tag: "New" },
+      { name: "Data Revolution", tag: "New" },
       { name: "TechTalk AI" },
       { name: "AI Conversations" },
     ],

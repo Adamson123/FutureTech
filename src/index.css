@@ -19,6 +19,8 @@
   --font-kubh-sans: "Kumbh Sans", sans-serif;
 }
 
+@custom-variant hover (&:hover);
+
 @utility text-xl_16-md_14-sm_12 {
   @apply text-xs md:text-sm xl:text-[16px];
 }
@@ -56,6 +58,7 @@
 }
 
 /* sm:max-w-["var(--sm-max-element-width)"] md:max-w-["var(--md-max-element-width)"] */
+/* TODO: Remove xl */
 @utility common-max-width {
   @apply xl:max-w-[var(--xl-max-element-width)];
 }
