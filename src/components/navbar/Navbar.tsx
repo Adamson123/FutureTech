@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav className="fixed inset-x-0 z-50">
       {/* Subscribe */}
       <div className="bg-background flex items-center justify-center bg-[url('/assets/navbar/wave.svg')] bg-cover bg-center bg-no-repeat py-4">
-        <div className="flex items-center gap-[13px] text-[#98989A]">
+        <div className="flex items-center gap-[13px] text-[#98989A] max-md:text-xs text-center">
           Subscribe to our Newsletter For New & latest Blogs and Resources
           <ArrowSvg className="size-[13.75]" />
         </div>
